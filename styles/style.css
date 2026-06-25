@@ -11,6 +11,11 @@ body {
     color: white;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* --- 1. NAVBAR --- */
 .navbar {
     display: flex;
@@ -39,6 +44,11 @@ body {
     margin: 0 15px;
     font-weight: bold;
     display: inline-block;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
 }
 
 .hero {
@@ -88,6 +98,14 @@ body {
     background-color: rgb(150, 8, 8);
 }
 
+.btn-secondary {
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(150, 8, 8);
+}
+
 /* --- TEMPORADAS --- */
 .temporadas {
     padding: 60px 10%;
@@ -111,6 +129,11 @@ body {
     padding: 15px;
     border-radius: 10px;
     text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.temp-card:hover {
+    transform: translateY(-5px);
 }
 
 .temp-card img {
@@ -251,4 +274,86 @@ body {
 .social-btn img:hover {
     transform: scale(1.15); 
     filter: brightness(1);
+}
+
+/* --- Media Tablett */
+@media (max-width: 1000px) {
+    .temporadas-lista {
+        flex-wrap: wrap;
+    }
+
+    .temp-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+/* --- Medial Cel --- */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin: 0;
+    }
+
+     /* Hero */
+    .hero {
+        height: auto;
+        min-height: 500px;
+        padding: 50px 10%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Temporadas */
+    .temporadas-lista {
+        flex-direction: column;
+    }
+
+    /* Banners */
+    .banners-container {
+        flex-direction: column;
+    }
+
+    .banner-card1,
+    .banner-card2 {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-box {
+        margin: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+
+
+
+
 }
